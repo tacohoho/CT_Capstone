@@ -4,9 +4,10 @@ import reportWebVitals from './reportWebVitals';
 import { Home, Dashboard, SignIn } from './components'
 import './styles.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { FirebaseAppProvider, AuthCheck } from 'reactfire';
+import { FirebaseAppProvider, AuthCheck, useFirestoreDocData, useFirestore, useFirebaseApp } from 'reactfire';
 import 'firebase/auth';
 import { firebaseConfig } from './firebaseConfig';
+// import { doc, getFirestore } from 'firebase/firestore';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { AuthCheck } from 'reactfire';
 import { useGetJoke } from '../../custom-hooks';
 import { server_calls } from '../../api';
+// import { doc, updateDoc } from 'firebase/firestore';
+
+// const ref = doc(db, "taeho0000@gmail.com", "jokes")
 
 interface Props{
     title: string;
@@ -110,6 +113,7 @@ export const Home = (props:Props) =>{
                     <p className={classes.sub_text}>Welcome to Joke Collection API! Sign in with Google to get started. Press the button below for a joke, save the joke, and view your collection in your dashboard!</p>
                     <Button color='primary' variant="contained" onClick={getData}>Click Here For A Joke!</Button>
                     <p className={classes.joke_text}>{joke.joke}</p>
+                    <Button color='primary' variant='contained'>Save This Joke</Button>
                 </div>
             </main>
         </div>
